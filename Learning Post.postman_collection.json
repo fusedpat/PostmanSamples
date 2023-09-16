@@ -1,0 +1,25 @@
+{
+	"info": {
+		"_postman_id": "42cff2af-4657-4624-aa24-5b27d49e52b0",
+		"name": "Learning Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
