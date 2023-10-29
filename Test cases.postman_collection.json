@@ -1,0 +1,660 @@
+{
+	"info": {
+		"_postman_id": "8f4c97f1-5d90-434a-abb3-362f84d36095",
+		"name": "Test cases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"console.log(responseJson[0]);\r",
+							"pm.globals.set(\"postsData\", responseJson[0]);\r",
+							"pm.globals.set(\"userId\", responseJson[1].id);\r",
+							"postman.setEnvironmentVariable('Env_Variable_key','Env_Variable_value');  \r",
+							"console.log(pm.globals.get(\"userId\"));\r",
+							"\r",
+							"\r",
+							"var array = [1, 2, 3, 4,5,6];  \r",
+							"pm.environment.set(\"array\", JSON.stringify(array, null, 2));  \r",
+							"\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"collection_variable_key\", \"collection_variable_value\");\r",
+							"\r",
+							"\r",
+							"// Assertions\r",
+							"pm.test(\"If 100 equal to 100\", function(){  \r",
+							"    pm.expect(100).to.eql(100);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Number included\", function(){  \r",
+							"pm.expect([100,200,300]).to.include(300);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Compare Name\", function(){  \r",
+							"  \r",
+							"let x= {  \r",
+							"\"name\" : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"let y= {  \r",
+							"\"name\"  : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"  let z= {  \r",
+							"\"name\"  : \"abc\"  \r",
+							"};  \r",
+							"pm.expect(x).to.eql(y);  \r",
+							"pm.expect(x).to.not.eql(z)\r",
+							"});  "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate a random number between 1 and 100\r",
+							"pm.environment.set(\"randomNumber\", Math.floor(Math.random() * 100) + 1);\r",
+							"\r",
+							"\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"// Log the generated random number\r",
+							"console.log(\"Generated random number:\", pm.environment.get(\"randomNumber\"));\r",
+							"\r",
+							"// Set the random number as a request header\r",
+							"//pm.request.headers.add({ key: \"X-Random-Number\", value: pm.environment.get(\"randomNumber\") });\r",
+							"pm.request.headers.add({ key: \"X-Random-Number\", value: \"78\" });\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test cases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"console.log(responseJson[0]);\r",
+							"pm.globals.set(\"postsData\", responseJson[0]);\r",
+							"pm.globals.set(\"userId\", responseJson[1].id);\r",
+							"postman.setEnvironmentVariable('Env_Variable_key','Env_Variable_value');  \r",
+							"console.log(pm.globals.get(\"userId\"));\r",
+							"\r",
+							"\r",
+							"var array = [1, 2, 3, 4,5,6];  \r",
+							"pm.environment.set(\"array\", JSON.stringify(array, null, 2));  \r",
+							"\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"collection_variable_key\", \"collection_variable_value\");\r",
+							"\r",
+							"\r",
+							"// Assertions\r",
+							"pm.test(\"If 100 equal to 100\", function(){  \r",
+							"    pm.expect(100).to.eql(100);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Number included\", function(){  \r",
+							"pm.expect([100,200,300]).to.include(300);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Compare Name\", function(){  \r",
+							"  \r",
+							"let x= {  \r",
+							"\"name\" : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"let y= {  \r",
+							"\"name\"  : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"  let z= {  \r",
+							"\"name\"  : \"abc\"  \r",
+							"};  \r",
+							"pm.expect(x).to.eql(y);  \r",
+							"pm.expect(x).to.not.eql(z)\r",
+							"});  "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate a random number between 1 and 100\r",
+							"pm.environment.set(\"randomNumber\", Math.floor(Math.random() * 100) + 1);\r",
+							"\r",
+							"\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"// Log the generated random number\r",
+							"console.log(\"Generated random number:\", pm.environment.get(\"randomNumber\"));\r",
+							"\r",
+							"// Set the random number as a request header\r",
+							"//pm.request.headers.add({ key: \"X-Random-Number\", value: pm.environment.get(\"randomNumber\") });\r",
+							"pm.request.headers.add({ key: \"X-Random-Number\", value: \"78\" });\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Set the request body\r",
+							"var requestBody = {\r",
+							"  userId: 1\r",
+							"};\r",
+							"console.log(pm.globals.get('id_request1'));\r",
+							"// Convert the request body to JSON\r",
+							"var requestBodyJson = JSON.stringify(requestBody);\r",
+							"\r",
+							"// Set the request body in the request\r",
+							"pm.request.body.raw = requestBodyJson;\r",
+							"pm.request.headers.add({\r",
+							"  key: \"Content-Type\",\r",
+							"  value: \"application/json\"\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Response status code assertion\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"console.log(responseJson[0]);\r",
+							"pm.globals.set(\"postsData\", responseJson[0]);\r",
+							"pm.globals.set(\"userId_request1\", responseJson[2].userId);\r",
+							"pm.globals.set(\"id_request1\", responseJson[2].id);\r",
+							"postman.setEnvironmentVariable('Env_Variable_key','Env_Variable_value');  \r",
+							"console.log(pm.globals.get(\"userId_request1\"));\r",
+							"console.log(pm.globals.get(\"id_request1\"));\r",
+							"\r",
+							"\r",
+							"var array = [1, 2, 3, 4,5,6];  \r",
+							"pm.environment.set(\"array\", JSON.stringify(array, null, 2));  \r",
+							"\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"collection_variable_key\", \"collection_variable_value\");\r",
+							"\r",
+							"\r",
+							"// Assertions\r",
+							"/*pm.test(\"String Comparing Operations\",functions()){\r",
+							"    pm.expect(\"Sar\").to.eql()\r",
+							"}\r",
+							"*/\r",
+							"\r",
+							"pm.test(\"If 100 equal to 100\", function(){  \r",
+							"    pm.expect(100).to.eql(200);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Number included\", function(){  \r",
+							"pm.expect([100,200,300,400]).to.include(500);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Compare Name\", function(){  \r",
+							"  \r",
+							"let x= {  \r",
+							"\"name\" : \"abc\"  \r",
+							"};  \r",
+							"  \r",
+							"let y= {  \r",
+							"\"name\"  : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"  let z= {  \r",
+							"\"name\"  : \"abc\"  \r",
+							"};  \r",
+							"//pm.expect(x).to.eql(y);  \r",
+							"pm.expect(x).to.not.eql(z)\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate a random number between 1 and 100\r",
+							"pm.environment.set(\"randomNumber\", Math.floor(Math.random() * 100) + 1);\r",
+							"\r",
+							"// Log the generated random number\r",
+							"console.log(\"Generated random number:\", pm.environment.get(\"randomNumber\"));\r",
+							"\r",
+							"// Set the random number as a request header\r",
+							"pm.request.headers.add({ key: \"X-Random-Number\", value: pm.environment.get(\"randomNumber\") });\r",
+							"// Added Manual Token\r",
+							"pm.environment.set(\"ManualToken\", Math.random()*100);\r",
+							"console.log(\"Generated Manual Token Key : \",pm.environment.get(\"ManualToken\"));\r",
+							"pm.request.headers.add({key: \"Manual_Token_Key\",value:pm.environment.get(\"ManualToken\")});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 3 - Post",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate a random user ID between 1 and 100\r",
+							"var randomUserId = Math.floor(Math.random() * 100) + 1;\r",
+							"pm.variables.set(\"userId\", randomUserId);\r",
+							"// Set the content-type header to JSON\r",
+							"pm.request.headers.add({ key: \"Content-Type\", value: \"application/json\" });\r",
+							"\r",
+							"// Constructing a JSON request body with dynamic values\r",
+							"var requestBody = {\r",
+							"    title: \"New Post\",\r",
+							"    body: \"This is a new post created by user \" + randomUserId,\r",
+							"    userId: randomUserId\r",
+							"};\r",
+							"pm.request.body.raw = JSON.stringify(requestBody);\r",
+							"pm.request.body.update(JSON.stringify(requestBody));\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Response status code assertion\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asserts example",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Response status code assertion\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Response time assertion\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Response body JSON schema validation\r",
+							"pm.test(\"Response body has expected structure\", function () {\r",
+							"    pm.response.to.have.jsonSchema({\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"            \"userId\": { \"type\": \"number\" },\r",
+							"            \"id\": { \"type\": \"number\" },\r",
+							"            \"title\": { \"type\": \"string\" },\r",
+							"            \"body\": { \"type\": \"string\" }\r",
+							"        },\r",
+							"        \"required\": [\"userId\", \"id\", \"title\", \"body\"]\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Response body property value assertions\r",
+							"pm.test(\"User ID is correct\", function () {\r",
+							"    pm.expect(pm.response.json().userId).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Post title is not empty\", function () {\r",
+							"    pm.expect(pm.response.json().title).to.not.be.empty;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body length is greater than 10 characters\", function () {\r",
+							"    pm.expect(pm.response.json().body.length).to.be.greaterThan(10);\r",
+							"});\r",
+							"\r",
+							"// Response body property value assertions\r",
+							"pm.test(\"User ID is a positive number\", function () {\r",
+							"    pm.expect(pm.response.json().userId).to.be.above(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Post ID is equal to 1\", function () {\r",
+							"    pm.expect(pm.response.json().id).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Title is of type string\", function () {\r",
+							"    pm.expect(pm.response.json().title).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains the word 'quia'\", function () {\r",
+							"    pm.expect(pm.response.json().body).to.include('quia');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log('userId being sent is' + pm.globals.get('userId'));\r",
+							"// Set the content-type header to JSON\r",
+							"pm.request.headers.add({ key: \"Content-Type\", value: \"application/json\" });\r",
+							"\r",
+							"// Add an authorization header\r",
+							"var token = \"YOUR_AUTH_TOKEN\";\r",
+							"pm.request.headers.add({ key: \"Authorization\", value: \"Bearer \" + token });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/{{userId}}",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = pm.response.json();\r",
+							"console.log(responseJson[0]);\r",
+							"pm.globals.set(\"postsData\", responseJson[0]);\r",
+							"pm.globals.set(\"userId\", responseJson[1].id);\r",
+							"postman.setEnvironmentVariable('Env_Variable_key','Env_Variable_value');  \r",
+							"console.log(pm.globals.get(\"userId\"));\r",
+							"\r",
+							"\r",
+							"var array = [1, 2, 3, 4,5,6];  \r",
+							"pm.environment.set(\"array\", JSON.stringify(array, null, 2));  \r",
+							"\r",
+							"pm.globals.set(\"variable_key\", \"variable_value\");\r",
+							"pm.collectionVariables.set(\"collection_variable_key\", \"collection_variable_value\");\r",
+							"\r",
+							"\r",
+							"// Assertions\r",
+							"pm.test(\"If 100 equal to 100\", function(){  \r",
+							"    pm.expect(100).to.eql(100);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Number included\", function(){  \r",
+							"pm.expect([100,200,300]).to.include(300);  \r",
+							"});  \r",
+							"\r",
+							"pm.test(\"Compare Name\", function(){  \r",
+							"  \r",
+							"let x= {  \r",
+							"\"name\" : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"let y= {  \r",
+							"\"name\"  : \"XYZ\"  \r",
+							"};  \r",
+							"  \r",
+							"  let z= {  \r",
+							"\"name\"  : \"abc\"  \r",
+							"};  \r",
+							"pm.expect(x).to.eql(y);  \r",
+							"pm.expect(x).to.not.eql(z)\r",
+							"});  "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generate a random number between 1 and 100\r",
+							"pm.environment.set(\"randomNumber\", Math.floor(Math.random() * 100) + 1);\r",
+							"\r",
+							"\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.collectionVariables.set(\"variable_key\", \"variable_value\");\r",
+							"// Log the generated random number\r",
+							"console.log(\"Generated random number:\", pm.environment.get(\"randomNumber\"));\r",
+							"\r",
+							"// Set the random number as a request header\r",
+							"//pm.request.headers.add({ key: \"X-Random-Number\", value: pm.environment.get(\"randomNumber\") });\r",
+							"pm.request.headers.add({ key: \"X-Random-Number\", value: \"78\" });\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "variable_key",
+			"value": ""
+		},
+		{
+			"key": "collection_variable_key",
+			"value": ""
+		}
+	]
+}
