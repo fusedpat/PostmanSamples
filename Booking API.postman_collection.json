@@ -263,13 +263,13 @@
 							},
 							{
 								"key": "cookie",
-								"value": "token={{booking_token}}",
+								"value": "token=271204087cdf29a",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstname\": \"Tester- Selenium - java -- 12\",\r\n    \"lastname\": \"Gayathiridevi\",\r\n    \"totalprice\": 111,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2018-01-01\",\r\n        \"checkout\": \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
+							"raw": "{\r\n    \"firstname\": \"first name\",\r\n    \"lastname\": \"fdsfdsf\",\r\n    \"totalprice\": 111,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2018-01-01\",\r\n        \"checkout\": \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\": \"Breakfast\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -409,7 +409,7 @@
 							"raw": "{\r\n    \"firstname\" : \"Magizhine\",\r\n    \"lastname\" : \"Hariharasuthan\"\r\n}"
 						},
 						"url": {
-							"raw": "https://restful-booker.herokuapp.com/booking/797",
+							"raw": "https://restful-booker.herokuapp.com/booking/123",
 							"protocol": "https",
 							"host": [
 								"restful-booker",
@@ -418,7 +418,7 @@
 							],
 							"path": [
 								"booking",
-								"797"
+								"123"
 							]
 						}
 					},
