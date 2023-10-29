@@ -263,7 +263,7 @@
 							},
 							{
 								"key": "cookie",
-								"value": "token=271204087cdf29a",
+								"value": "token={{booking_token}}",
 								"type": "text"
 							}
 						],
@@ -406,7 +406,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstname\" : \"Magizhine\",\r\n    \"lastname\" : \"Hariharasuthan\"\r\n}"
+							"raw": "{\r\n    \"firstname\" : \"first\",\r\n    \"lastname\" : \"lasts\"\r\n}"
 						},
 						"url": {
 							"raw": "https://restful-booker.herokuapp.com/booking/123",
@@ -612,6 +612,12 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "booking_id_being_worked_on",
+			"value": "126"
 		}
 	]
 }
